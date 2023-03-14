@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed w-full flex flex-row justify-between px-6 py-3">
+    <div class="w-full flex flex-row justify-between px-6 py-3">
         <div class="flex-1">
             <h1 class="font-['Righteous'] font-bold text-3xl tracking-wider">
                 <a href="#home">newbie</a>

@@ -7,7 +7,7 @@ import HomeView from '@/views/HomeView.vue'
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap');
 
 body {
     background-color: #111111;
