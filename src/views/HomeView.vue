@@ -1,13 +1,8 @@
-<script setup>
-import HeaderComponent from '@/components/HeaderComponent.vue'
-import FooterComponent from '@/components/FooterComponent.vue'
-</script>
-
 <template>
     <header class="fixed w-full">
         <HeaderComponent />
     </header>
-    <main class="w-full">
+    <main id="home" class="w-full">
         <section class="flex flex-col justify-center w-1/2 h-screen mx-auto">
             <div class="text-[#00ccc2]">
                 Hello, my name is 
@@ -21,10 +16,6 @@ import FooterComponent from '@/components/FooterComponent.vue'
             <div class="mt-4 mb-9 text-[18px] text-justify tracking-wide leading-relaxed">
                 <div class="mb-6">
                     I'm passionate about building intuitive, user-friendly websites and web applications that help businesses and individuals achieve their goals.
-                </div>
-                <div class="mb-6">
-                    My journey into web development started when I joined Village88, a bootcamp that focusing in full-stack web development. 
-                    Since then, I've been honing my skills in HTML, CSS, JavaScript, PHP, and various web development frameworks and libraries such as Vue.js, Laravel, and Tailwind CSS. In my experiences, I prioritize clean, maintainable code and responsive design that looks great on any device. I love to challenge myself and push my skills to the limit by taking on projects that require me to learn new technologies and techniques.
                 </div>
             </div>
             <div class="flex flex-row justify-between items-center">
@@ -47,12 +38,17 @@ import FooterComponent from '@/components/FooterComponent.vue'
                 </div>
             </div>
         </section>
-        <section class="h-screen">
-            <h1>Introduction</h1>
+        <section id="about-me" class="flex flex-col justify-center w-[700px] h-screen mx-auto">
+            <AboutView/>
         </section>
     </main>
     <FooterComponent/>
 </template>
+<script setup>
+import HeaderComponent from '@/components/HeaderComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import AboutView from './AboutView.vue'
 
+</script>
 <style>
 </style>
