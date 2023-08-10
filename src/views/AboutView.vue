@@ -53,7 +53,7 @@ import { reactive } from 'vue'
 
 const state = reactive({ 
     techs: ['HTML & CSS','Javascript', 'Ruby', 'PHP', 'C#'],
-    frameworks: ['Laravel', 'VueJS', 'Ruby on Rails', 'ASP.Net Web API'],
+    frameworks: ['Laravel/API', 'VueJS', 'ReactJS', 'Ruby on Rails', 'ASP.Net Web API'],
     databases: ['MySQL', 'Microsoft SQL Server', 'PostgreSQL'],
     tools: ['Postman', 'Git']
 })

@@ -41,6 +41,9 @@
         <section id="about-me" class="flex flex-col justify-center w-[700px] h-screen mx-auto">
             <AboutView/>
         </section>
+        <section id="projects" class="flex flex-col justify-center w-[700px] h-screen mx-auto">
+            <ProjectView />
+        </section>
     </main>
     <FooterComponent/>
 </template>
@@ -48,6 +51,7 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import AboutView from './AboutView.vue'
+import ProjectView from './ProjectView.vue';
 
 </script>
 <style>
