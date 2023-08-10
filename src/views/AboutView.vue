@@ -1,10 +1,14 @@
 <template>
     <div>
-        <h1 class="mb-6 text-3xl font-bold text-gray-100 tracking-wide border-b border-[#00ccc2]">About Me</h1>
+        <h1 class="mb-6 pb-2 text-3xl font-bold text-gray-100 tracking-wide border-b border-[#00ccc2]">About Me</h1>
         <div class="text-[16px] text-justify tracking-wide leading-relaxed">
             <div class="mb-6">
             My journey into web development started when I joined Village88, a bootcamp that focusing in full-stack web development. 
             Since then, I've been honing my skills in HTML, CSS, JavaScript, PHP, and various web development frameworks and libraries such as Vue.js, Laravel, and Tailwind CSS. In my experiences, I prioritize clean, maintainable code and responsive design that looks great on any device. I love to challenge myself and push my skills to the limit by taking on projects that require me to learn new technologies and techniques.
+            </div>
+            <div class="mb-6">
+                Embarking on a journey to master the TALL Stack—Tailwind CSS, Alpine.js, Laravel, and Livewire. Elevating my full-stack web development skills to create efficient, stylish, and interactive applications. Excited for the impact this expertise will bring to my coding prowess.
+                To be soon develop a mobile applications.
             </div>
             <div class="mb-6">
                 I'm excited about the future of web development and the endless possibilities it offers. If you're looking for a dedicated, motivated junior developer to bring your vision to life, please don't hesitate to contact me. I'd love to hear from you!
@@ -52,8 +56,8 @@
 import { reactive } from 'vue'
 
 const state = reactive({ 
-    techs: ['HTML & CSS','Javascript', 'Ruby', 'PHP', 'C#'],
-    frameworks: ['Laravel/API', 'VueJS', 'ReactJS', 'Ruby on Rails', 'ASP.Net Web API'],
+    techs: ['HTML & CSS','Javascript', 'PHP'],
+    frameworks: ['Laravel/API', 'VueJS', 'ReactJS', 'TailwindCSS', 'JQuery'],
     databases: ['MySQL', 'Microsoft SQL Server', 'PostgreSQL'],
     tools: ['Postman', 'Git']
 })

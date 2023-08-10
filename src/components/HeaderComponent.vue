@@ -8,14 +8,17 @@
         <nav class="flex-1 flex justify-end">
             <ul class="w-1/3 h-full flex flex-row justify-between items-center">
                 <li class="px-4 py-1 transition rounded hover:bg-gray-600/30">
-                    <a href="">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li class="px-4 py-1 transition rounded hover:bg-gray-600/30">
                     <a href="#about-me">About</a>
                 </li>
                 <li class="px-4 py-1 transition rounded hover:bg-gray-600/30">
-                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
                 </li>
+                <!-- <li class="px-4 py-1 transition rounded hover:bg-gray-600/30">
+                    <a href="#contact">Contact</a>
+                </li> -->
             </ul>
         </nav>
     </div>
