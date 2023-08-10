@@ -1,8 +1,9 @@
 <template>
     <div class="w-full flex flex-row justify-between px-6 py-3 border-b border-gray-500/40 backdrop-blur-xl">
         <div class="flex-1">
-            <h1 class="font-['Righteous'] font-bold text-3xl tracking-wider">
-                <a href="#home">newbie</a>
+            <h1 class="flex items-center font-['Dosis'] font-bold text-3xl tracking-wider">
+                <span><img src="@/assets/nc-transparent-background.png" alt="NC Logo" class="h-8 mr-2"></span>
+                <a href="#home" class="text-md tracking-tight">NewbieCed</a>
             </h1>
         </div>
         <nav class="flex-1 flex justify-end">
@@ -25,7 +26,7 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
 h1 {
   background-image: linear-gradient(#00ccc2, #079292);
