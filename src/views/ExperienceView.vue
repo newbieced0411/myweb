@@ -91,7 +91,7 @@
                         <div class="w-[102px] h-7 left-0 top-0 absolute">
                             <img
                                 class=""
-                                src="../assets/prescribe-digital-logo-01.svg" />
+                                src="../assets/village88-main-logo.svg" />
                         </div>
                     </div>
                 </div>
