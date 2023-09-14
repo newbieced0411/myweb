@@ -1,45 +1,54 @@
 <template>
-    <header class="fixed w-full">
+    <header class="px-80" :class="state.scroll ? state.whenScroll : state.defaultHeader">
         <HeaderComponent />
     </header>
     <main id="home" class="w-full">
-        <section class="flex flex-col justify-center w-1/2 h-screen mx-auto">
-            <div class="text-[#00ccc2]">
-                Hello, my name is 
-            </div>
-            <div class="my-2 text-7xl font-[500] text-gray-100 leading-normal ">
-                Cedrick Dela Carcel
-            </div>
-            <div class="mb-6 text-3xl font-[500] text-gray-200 ">
-                junior web developer
-            </div>
-            <div class="mt-4 mb-9 text-[18px] text-justify tracking-wide leading-relaxed">
-                <div class="mb-6">
-                    I'm passionate about building intuitive, user-friendly websites and web applications that help businesses and individuals achieve their goals.
+        <section class="relative flex flex-row items-center self-stretch justify-center px-20 py-24 overflow-hidden shrink-0">
+            <div class="relative flex flex-col items-start justify-start w-1/2 gap-4 px-8">
+                <div class="relative flex flex-col items-start self-stretch justify-center gap-2 shrink-0">
+                    <h1 class="relative text-left text-gray-100" style="font: var(--heading-h-1-bold-desktop, 700 60px/72px 'Inter', sans-serif);">
+                        Hi, I’m Cedrick 👋
+                    </h1>
+                    <div class="text-gray-dark-600 text-left relative w-[768px] tracking-wide leading-relaxed" style="font: var(--body-2-normal-all, 400 16px/24px 'Inter', sans-serif);">
+                        I&#039;m a full stack developer (Laravel, Livewire, API, &amp; Vue.js) with a focus on creating (and occasionally developing UI/UX) exceptional digital
+                        experiences. I'm passionate about building intuitive, user-friendly websites and web applications that help businesses and individuals achieve their goals.
+                    </div>
                 </div>
-            </div>
-            <div class="flex flex-row justify-between items-center">
-                <div class="flex flex-row justify-around items-center">
-                    <a href="https://github.com/newbieced0411" title="github" target="_blank" class="px-2 py-1 transition rounded hover:bg-gray-600/30">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" class="p-1">
-                            <path fill="currentColor" d="M12 0a12 12 0 00-3.8 23.36c.6.11.82-.26.82-.58v-1.99c-3.35.73-4.05-1.61-4.05-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.73.08-.72.08-.72 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.82 1.3 3.5 1 .11-.8.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.92 0-1.3.46-2.36 1.24-3.19-.14-.3-.54-1.51.1-3.14 0 0 1-.32 3.3 1.22a11.38 11.38 0 016 0c2.3-1.54 3.3-1.22 3.3-1.22.64 1.63.24 2.84.12 3.14.77.83 1.23 1.9 1.23 3.19 0 4.59-2.81 5.62-5.48 5.92.43.36.82 1.09.82 2.2v3.26c0 .32.21.69.83.58A12 12 0 0012 0z"/>
+                <div class="relative flex flex-col items-start self-stretch justify-center gap-2 shrink-0">
+                    <div class="relative flex flex-row items-center self-stretch justify-start gap-2 shrink-0">
+                        <svg class="relative overflow-visible shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 10C20 16 12 22 12 22C12 22 4 16 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/newbie-cedrick/" title="linkedin" target="_blank" class="px-2 py-1 transition rounded hover:bg-gray-600/30">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" class="p-1">
-                            <path fill="currentColor" d="M20.035 20.034h-3.447v-5.384c0-1.287-.023-2.941-1.789-2.941-1.79 0-2.064 1.4-2.064 2.847v5.478h-3.447V9h3.354v1.513h.047c.466-.882 1.605-1.81 3.309-1.81 3.534 0 4.185 2.327 4.185 5.358V20.034zM5.894 7.395c-1.032 0-1.871-.84-1.871-1.871s.84-1.871 1.871-1.871 1.871.84 1.871 1.871-.84 1.871-1.871 1.871zM3.448 20.034h3.447V9H3.448v11.034zM22.401 0H1.599C.715 0 0 .715 0 1.599v20.802c0 .883.715 1.599 1.599 1.599h20.802c.883 0 1.599-.715 1.599-1.599V1.599c0-.884-.715-1.599-1.599-1.599z"/>
-                        </svg>
-                    </a>
+                        <div class="relative text-left text-gray-dark-600" style="font: var( --body-2-normal-all, 400 16px/24px 'Inter', sans-serif);">
+                            Marikina, Philippines
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="mailto:jctdelacarcel@gmail.com" class="py-4 px-5 text-white font-semibold bg-[#272727] border border-gray-400 rounded transition hover:bg-gray-700">
-                        Email me
-                    </a>
+                <div class="relative flex flex-col items-start self-stretch justify-start gap-4 shrink-0">
+                    <div class="relative flex flex-row items-center justify-start gap-1 overflow-hidden shrink-0">
+                        <div class="rounded-lg p-1.5 flex flex-row gap-0 items-center justify-center shrink-0 relative">
+                            <a href="https://github.com/newbieced0411" target="_blank">
+                                <svg class="relative overflow-visible shrink-0" style="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9998 22V18C15.1389 16.7473 14.7797 15.4901 13.9998 14.5C16.9998 14.5 19.9998 12.5 19.9998 9C20.0798 7.75 19.7298 6.52 18.9998 5.5C19.2798 4.35 19.2798 3.15 18.9998 2C18.9998 2 17.9998 2 15.9998 3.5C13.3598 3 10.6398 3 7.99979 3.5C5.99979 2 4.99979 2 4.99979 2C4.69979 3.15 4.69979 4.35 4.99979 5.5C4.27167 6.51588 3.91827 7.75279 3.99979 9C3.99979 12.5 6.99979 14.5 9.99979 14.5C9.60979 14.99 9.31979 15.55 9.14979 16.15C8.97979 16.75 8.92979 17.38 8.99979 18V22" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 18C4.49 20 4 16 2 16" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="rounded-lg p-1.5 flex flex-row gap-0 items-center justify-center shrink-0 relative">
+                            <a href="https://www.linkedin.com/in/newbie-cedrick/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="about-me" class="flex flex-col justify-center w-[700px] h-screen mx-auto">
+        <section id="about-me" class="relative flex flex-row items-start self-stretch justify-center pt-24 pb-24 pl-20 pr-20 overflow-hidden shrink-0" style="font: var( --body-2-normal-all, 400 16px/24px 'Inter', sans-serif);">
             <AboutView/>
+        </section>
+        <section class="relative flex flex-row items-start self-stretch justify-center pt-24 pb-24 pl-20 pr-20 overflow-hidden shrink-0">
+            <TechsView />
         </section>
         <section id="experience" class="flex flex-col justify-center w-[700px] h-screen mx-auto">
             <ProjectView />
@@ -54,8 +63,25 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import AboutView from './AboutView.vue'
+import TechsView from './TechsView.vue'
 import ProjectView from './ExperienceView.vue'
 // import ContactView from './ContactView.vue'
+
+import { onMounted, reactive } from 'vue'
+
+const state = reactive({
+    scroll: false,
+    defaultHeader: 'sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-50 ',
+    whenScroll: 'sticky top-0 z-30 w-full border-b border-transparent max-md:border-gray-50 bg-gray/50 backdrop-blur-xl md:border-gray-50',
+})
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+
+function handleScroll() {
+    state.scroll = window.scrollY > 0;
+}
 </script>
 <style>
 </style>
