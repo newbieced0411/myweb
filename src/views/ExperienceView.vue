@@ -101,11 +101,12 @@
                     </div>
                     <ul class="flex flex-col items-start self-stretch justify-start gap-1 list-disc">
                         <li class="self-stretch text-gray-300 text-base font-normal font-['Inter'] leading-normal">
-                            Developed mini games using JS, simple clone website using Web Fundamentals, and E-commerce using PHP/CI.
+                            Developed mini games using JS, simple clone website using Web Fundamentals, and E-commerce
+                            using PHP/CI.
                         </li>
                         <li class="self-stretch text-gray-300 text-base font-normal font-['Inter'] leading-normal">
-                            Developed a 3D globe with Twitter API, a mini project that implement a 3D globe using D3.js and by hovering a country
-                            will show the top tweets and redirect to Twitter when clicked.
+                            Developed a 3D globe with Twitter API, a mini project that implement a 3D globe using D3.js
+                            and by hovering a country will show the top tweets and redirect to Twitter when clicked.
                         </li>
                         <li class="self-stretch text-gray-300 text-base font-normal font-['Inter'] leading-normal">
                             Trained and answered to the coding and programming activities in their curriculum.
@@ -114,8 +115,21 @@
                             Worked with a variety of technologies, HTML, CSS, JS, PHP, Node.js, Ruby, Ruby on Rails
                         </li>
                         <li class="self-stretch text-gray-300 text-base font-normal font-['Inter'] leading-normal">
-                           Github links:
-                           <div>https://github.com/justced01/JSCapstone</div>
+                            Github links:
+                            <div>
+                                <a
+                                    href="https://github.com/justced01/JSCapstone"
+                                    target="_blank"
+                                    >https://github.com/justced01/JSCapstone</a
+                                >
+                            </div>
+                            <div>
+                                <a
+                                    href="https://github.com/justced01/Village88"
+                                    target="_blank"
+                                    >https://github.com/justced01/Village88</a
+                                >
+                            </div>
                         </li>
                     </ul>
                 </div>
