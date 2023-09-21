@@ -1,6 +1,7 @@
 <script setup>
     import { ref } from "vue";
 
+    let mobileMenuOpen = ref(false);
     const tabs = ref([
         {
             id: "#about-me",
@@ -15,7 +16,7 @@
             text: "Contact",
         },
     ]);
-    
+
     function downloadCV() {
         // Create the content of the file (e.g., a sample text)
         const fileContent = "../assets/CV-John-Cedrick-Dela-Carcel-1.pdf";
@@ -37,21 +38,47 @@
         // Clean up by revoking the object URL
         URL.revokeObjectURL(url);
     }
+
+    function toggleMobileMenu() {
+        // Toggle the state of the mobile menu
+        mobileMenuOpen.value = !mobileMenuOpen.value;
+    }
 </script>
 
 <template>
-    <div class="flex flex-row justify-between w-full px-6 py-3 backdrop-blur-xl">
+    <div class="flex flex-row w-full p-2 relevant lg:py-3 lg:px-6 lg:justify-between">
         <div class="flex-1">
             <h1 class="flex items-center text-3xl font-bold tracking-wider">
-                <!-- <span><img src="@/assets/nc-transparent-background.png" alt="NC Logo" class="h-8 mr-2"></span> -->
                 <a
                     href="#home"
-                    class="text-center text-gray-50 text-3xl font-bold font-['Inter'] leading-9"
-                    ><span>&lt;ced /&gt;</span></a
-                >
+                    class="text-center text-gray-50 text-3xl font-bold font-['Inter'] leading-9">
+                    <span>&lt;ced /&gt;</span>
+                </a>
             </h1>
         </div>
-        <nav class="flex justify-end flex-1 gap-x-12 text-gray-300 text-base font-medium font-['Inter'] leading-normal">
+
+        <!-- Burger Menu for Mobile and Tablet -->
+        <div class="flex items-center lg:hidden">
+            <button
+                @click="toggleMobileMenu"
+                class="px-2 py-1 text-gray-300 focus:outline-none">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <nav
+            class="hidden lg:flex justify-end flex-1 gap-x-12 text-gray-300 text-base font-medium font-['Inter'] leading-normal">
             <ul class="flex flex-row items-center justify-between w-1/3 h-full">
                 <li
                     v-for="tab in tabs"
@@ -67,5 +94,30 @@
                 <span class="relative text-left text-gray-900">Download CV</span>
             </button>
         </nav>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div
+            v-if="mobileMenuOpen"
+            class="absolute flex items-center justify-center w-full h-screen text-gray-300 bg-[#111111] opacity-95 backdrop-blur-lg top-14 md:justify-center md:right-0 md:w-1/2 lg:hidde">
+            <ul class="flex flex-col items-center justify-center h-full">
+                <li
+                    @click="toggleMobileMenu"
+                    v-for="tab in tabs"
+                    v-bind:key="tab"
+                    class="px-4 py-2 transition hover:bg-gray-600/30">
+                    <a :href="tab.id">{{ tab.text }}</a>
+                </li>
+                <li class="px-4 py-2 transition hover:bg-gray-600/30">
+                    <button
+                        @click="downloadCV"
+                        class="text-gray-300 focus:outline-none">
+                        Download CV
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
+
+<style>
+</style>

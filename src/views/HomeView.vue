@@ -1,6 +1,6 @@
 <template>
     <header
-        class="px-80"
+        class="lg:px-80"
         :class="state.scroll ? state.whenScroll : state.defaultHeader">
         <HeaderComponent />
     </header>
@@ -8,21 +8,21 @@
         id="home"
         class="w-full">
         <section
-            class="relative flex flex-row items-center self-stretch justify-center px-20 py-24 overflow-hidden shrink-0">
-            <div class="relative flex flex-col items-start justify-start w-1/2 gap-4 px-8">
-                <div class="relative flex flex-col items-start self-stretch justify-center gap-2 shrink-0">
+            class="relative py-10 lg:flex lg:flex-row lg:overflow-hidden lg:items-center lg:self-stretch lg:justify-center lg:px-20 lg:py-24 shrink-0">
+            <div class="relative flex flex-col items-start justify-start gap-4 px-8 lg:w-1/2">
+                <div
+                    class="relative flex flex-col items-start self-stretch justify-center gap-2 shrink-0"
+                    style="font: var(--body-2-normal-all, 400 16px/24px 'Inter', sans-serif)">
                     <h1
-                        class="relative text-left text-gray-100"
-                        style="font: var(--heading-h-1-bold-desktop, 700 60px/72px 'Inter', sans-serif)">
+                        class="relative text-4xl font-bold leading-9 text-center text-gray-100 md:text-5xl lg:text-6xl md:text-left font-inter">
                         Hi, I’m Cedrick 👋
                     </h1>
                     <div
-                        class="text-gray-dark-600 text-left relative w-[768px] tracking-wide leading-relaxed"
-                        style="font: var(--body-2-normal-all, 400 16px/24px 'Inter', sans-serif)">
-                        I&#039;m a full stack developer (Laravel, Livewire, API, &amp; Vue.js) with a focus on creating
-                        (and occasionally developing UI/UX) exceptional digital experiences. I'm passionate about
-                        building intuitive, user-friendly websites and web applications that help businesses and
-                        individuals achieve their goals.
+                        class="text-gray-dark-600 text-center md:text-left relative w-full md:w-[768px] tracking-wide leading-relaxed font-inter text-base md:text-lg lg:text-l">
+                        I'm a full stack developer (Laravel, Livewire, API, &amp; Vue.js) with a focus on creating (and
+                        occasionally developing UI/UX) exceptional digital experiences. I'm passionate about building
+                        intuitive, user-friendly websites and web applications that help businesses and individuals
+                        achieve their goals.
                     </div>
                 </div>
                 <div class="relative flex flex-col items-start self-stretch justify-center gap-2 shrink-0">
@@ -131,7 +131,9 @@
             class="relative flex flex-row items-start self-stretch justify-center px-20 py-24 overflow-hidden shrink-0">
             <ProjectView />
         </section>
-        <section id="contact" class="relative flex flex-row items-start self-stretch justify-center px-20 py-24 overflow-hidden shrink-">
+        <section
+            id="contact"
+            class="relative flex flex-row items-start self-stretch justify-center px-20 py-24 overflow-hidden shrink-">
             <ContactView />
         </section>
     </main>
@@ -143,7 +145,7 @@
     import AboutView from "./AboutView.vue";
     import TechsView from "./TechsView.vue";
     import ProjectView from "./ExperienceView.vue";
-    import ContactView from './ContactView.vue'
+    import ContactView from "./ContactView.vue";
 
     import { onMounted, reactive } from "vue";
 
